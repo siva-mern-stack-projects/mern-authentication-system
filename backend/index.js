@@ -18,6 +18,8 @@ app.get('/',(req,res) => {
     res.send('Auth Backend is running ');
 });
 
+app.use("/api/auth",require("./routes/authRoutes"))
+
 app.listen(PORT, ()=> {
     console.log(`Server running on ${PORT}`)
-});
+}); 
